@@ -14,6 +14,9 @@ then you can run the app. (This is meant for the nginx reverse proxy usage for n
 
 or alternatively you can use pm2 right ?
 Install the pm2 then
+
 `$ npm install pm2 -g`
-you can create a app that will reset if anythink bad happens. 
+
+you can create a app that will reset if anything bad happens. 
+
 `$ pm2 start index --name yt-dl-app`
