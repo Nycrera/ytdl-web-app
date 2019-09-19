@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Users you look here -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Something Called Favicon-->
+	<link rel="shortcut icon" href="fav.png">
+	<!-- Font Awesome Yay!-->
+	<link rel="stylesheet" href="fa/css/font-awesome.min.css">
+	<!-- Wait ... Thats me! -->
+	<meta name="author" content="Nycrera">
+	<!-- I dont use this shit but anyway -->
+	<meta name="description" content="">
+	<!-- Oh yeah sure. -->
+	<meta charset="UTF-8">
+	<!-- Oh boy that's really cool! -->
+	<title>Tools for people like me.</title>
+	<!-- For your eye's comfort. -->
+	<link rel="stylesheet" href="hack.css">
+	<link rel="stylesheet" href="solarized-dark.css">
+	<link rel="stylesheet" href="loader.css">
+	<script type="text/javascript" src="app.js"></script>
+</head>
+
+<body class="hack solarized-dark">
+	<script type="text/javascript"></script>
+	<div class="main container">
+		<h1 id="title"></h1>
+		<div class="menu">
+			<a href="http://tools.alperen.tech" class="menu-item">
+				Back to tools <div class="pull-left"><i class="fa fa-angle-up fa-lg"></i></div>
+			</a>
+			<a href="https://alperen.tech" class="menu-item">
+				Homepage <div class="pull-left"><i class="fa fa-angle-left fa-lg"></i></div>
+			</a>
+		</div>
+		<br>
+		<div class="grid">
+			<div class="cell -2of12"><img style="height: 60%" src="av.gif"></div>
+			<div class="cell -10of12">
+				<div class="card-content">
+					<div class="inner">Hi, this is a free tool for downloading diffrent types of media from youtube!
+						For now i am not limiting any usage but if the events turns out for me to do so I probably will
+						limit the usage per person.
+						So, please don't abuse this beautiful service will ya'?
+						Also you can find the source code for this project in github. And maybe even host it, yourself.
+						(Not available yet though. This website just got realeased after all 0_0 )
+						<!--<a target="_blank" href=" https://github.com/nycrera/ytdl-web-app"><i
+								class="fa fa-github fa-2x"></i></a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+		<div class="grid -middle">
+			<div class="card" style="width: 70%;margin: auto;">
+				<header class="card-header">Youtube Downloader</header>
+				<div class="card-content">
+					<div class="inner">
+						<form class="form" style="margin:auto">
+							<fieldset id="vidUrlForm" class="form-group">
+								<b>Youtube Video URL:</b>
+								<input style="width:100%;" id="vidUrl" type="text"
+									placeholder="Example: https://www.youtube.com/watch?v=03x0bU2w9HI"
+									class="form-control">
+							</fieldset>
+							<div class="form-actions">
+								<button type="button" id="nextButton" class="btn btn-primary btn-block"><i
+										class="fa fa-angle-double-right fa-2x"></i>
+									&nbsp;&nbsp; Next &nbsp;&nbsp;<i
+										class="fa fa-angle-double-right fa-2x"></i></button>
+							</div>
+						</form>
+						<div id="loading" class="lds-dual-ring"></div>
+						<br>
+						<div id="progressBar" style="display: none" class="progress-bar progress-bar-show-percent">
+							<div id="progressBarContent" class="progress-bar-filled" style="width: 0%"
+								data-filled="Downloading 0%"></div>
+						</div>
+						<br>
+						<div id="infocard" class="card" style="display:none">
+							<a id="target" style="display: none"></a>
+							<header class="card-header" id="vidname">Video Name / Author</header>
+							<div class="card-content">
+								<div class="inner">
+									<img id="vidImg" style="width: 70%" src="av.gif">
+									<div id="downloads"></div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
