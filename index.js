@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const ytdl = require('ytdl-core');
 const app = express();
+const NET_PORT = 4000
+
 const crypto = require('crypto');
 const key = crypto.randomBytes(32);
 const iv = crypto.randomBytes(16);
@@ -16,7 +18,7 @@ app.use(express.urlencoded({
 }));
 //app.enable('trust proxy'); // if Nginx Reverse Proxy used, we have to activate proxy trust.
 
-app.listen(4000, () => {
+app.listen(NET_PORT, () => {
     availability = true;
     console.log('Ytdl Server Works !!! At port 4000');
 });
@@ -104,24 +106,6 @@ function decryptToObject(text) {
             return false; // If this happens either something wrong with the server or the validateString and key is compromised.
         }
     }
-}
-
-function youtubeTest() {
-    let sample = "https://youtu.be/3l4AxTa63RE";
-    ytdl.getInfo(sample, (err, info) => {
-        if (err) console.error(err);
-        else console.log(info);
-    });
-}
-
-function securityTest() {
-    let data = genData("127.0.0.1", "https://www.youtube.com/watch?v=EngW7tLk6R8", 2, "Sample Videos / Dummy Videos For Demo Use")
-    console.log(data);
-    data = encrypt(data);
-    console.log("\n\n");
-    console.log(data);
-    console.log("\n\n");
-    console.log(decryptToJson(data));
 }
 
 function genData(ip, url, type, vidName) {
