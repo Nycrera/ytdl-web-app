@@ -44,7 +44,7 @@ app.get('/info', (req, res) => {
     }
     ytdl.getInfo(URL, (err, info) => {
         if (err) {
-            ErrorHandler(4, "Unknown Server Error", res);
+            ErrorHandler(4, "Server Error", res);
             return;
         }
         let infoResponse = {
